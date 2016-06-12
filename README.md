@@ -75,9 +75,9 @@ vagrant plugin install vagrant-multiprovider-snap
 ### Running from this repository
 
 ```
-git clone https://github.com/Iristyle/channel9-2016
-cd channel9-2016
-vagrant up --provider=virtualbox
+git clone https://github.com/goutham27/puppet-control
+cd puppet-control
+vagrant up master --provider=virtualbox
 ```
 
 #### Access the PE console
@@ -86,7 +86,7 @@ vagrant up --provider=virtualbox
 
 ```
 user: admin
-pass: puppet
+pass: puppetlabs
 ```
 
 #### SSH to the master
@@ -98,7 +98,7 @@ vagrant ssh master
 #### RDP to the Windows agent
 
 ```
-vagrant rdp win2012r2-agent
+vagrant rdp vagrant-win2012r2
 ```
 
 ### Footnotes
@@ -107,17 +107,3 @@ vagrant rdp win2012r2-agent
 
 * [Joe Fitzgerald's Windows Templates](https://github.com/joefitzgerald/packer-windows)
 * [Box-cutter](https://github.com/box-cutter/windows-vm)
-
-#### Modules Used
-
-* [ACL Module](https://forge.puppetlabs.com/puppetlabs/acl)
-* [DSC Module](https://forge.puppetlabs.com/puppetlabs/dsc) | [Source Code](https://github.com/puppetlabs/puppetlabs-dsc)
-* [PowerShell Module](https://forge.puppetlabs.com/puppetlabs/powershell)
-* [Reboot Module](https://forge.puppetlabs.com/puppetlabs/reboot)
-* [Registry Module](https://forge.puppetlabs.com/puppetlabs/registry)
-
-#### Other Resources
-
-* [Managing Windows with Puppet from puppetconf 2013](http://puppetlabs.com/presentations/managing-windows-puppet)
-* [PuppetConf 2015 Puppet + DSC Video](https://www.youtube.com/watch?v=TP0zqe-yQto) | [Demo Code](https://github.com/Iristyle/puppetconf2015)
-* [James Pogran “Learning PowerShell DSC”](https://www.packtpub.com/networking-and-servers/learning-powershell-dsc)
