@@ -1,60 +1,17 @@
-forge 'http://forge.puppetlabs.com'
+forge "http://forge.puppetlabs.com"
 
-mod 'ntp',
-  :git => 'https://github.com/puppetlabs/puppetlabs-ntp.git'
+mod "puppetlabs/concat",   '2.1.0'
+mod 'hunner/hiera',        '2.0.1'
+mod "puppetlabs/firewall", '1.8.0'
+mod "puppetlabs/java",     '1.5.0'
+mod "puppetlabs/motd",     '1.4.0'
+mod "puppetlabs/ntp",      '4.1.2'
+mod "puppetlabs/stdlib",   '4.11.0'
+mod "puppetlabs/inifile",  '1.5.0'
+mod "puppetlabs/vcsrepo",  '1.3.2'
+mod "puppetlabs/windows",  '2.2.0'
+mod "zack/r10k"
 
-###############################################################################
-# General dependencies
-
-mod 'stdlib',
-  :git => 'https://github.com/puppetlabs/puppetlabs-stdlib.git'
-
-mod 'inifile',
-  :git => 'https://github.com/puppetlabs/puppetlabs-inifile.git'
-
-mod 'concat',
-  :git => 'https://github.com/puppetlabs/puppetlabs-concat.git'
-
-mod 'hiera',
-  :git => 'https://github.com/hunner/puppet-hiera.git'
-
-mod 'ruby',
-  :git => 'https://github.com/puppetlabs/puppetlabs-ruby.git'
-
-mod 'gcc',
-  :git => 'https://github.com/puppetlabs/puppetlabs-gcc.git'
-
-mod 'vcsrepo',
-  :git => 'https://github.com/puppetlabs/puppetlabs-vcsrepo.git'
-
-mod 'git',
-  :git => 'https://github.com/puppetlabs/puppetlabs-git.git'
-
-mod 'make',
-  :git => 'https://github.com/croddy/puppet-make.git'
-
-mod 'pe_gem',
-  :git => 'https://github.com/puppetlabs/puppetlabs-pe_gem.git'
-
-mod 'r10k',
-  :git => 'https://github.com/acidprime/r10k.git'
-
-mod 'java',
-  :git => 'https://github.com/puppetlabs/puppetlabs-java.git'
-
-mod 'staging',
-  :git => 'https://github.com/nanliu/puppet-staging.git'
-
-mod 'epel',
-  :git => 'https://github.com/stahnma/puppet-module-epel.git'
-
-mod 'windows',
-  :git => 'https://github.com/puppetlabs/puppetlabs-windows.git'
-
-mod 'azure',
-  :git => 'https://github.com/puppetlabs/puppetlabs-azure.git'
-
-mod 'dsc',
-  :git => 'https://github.com/puppetlabs/puppetlabs-dsc.git'
-
-###############################################################################
+#mod 'apache',
+#  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
+#  :commit => '83401079053dca11d61945bd9beef9ecf7576cbf'
