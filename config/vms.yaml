@@ -45,7 +45,6 @@ roles:
   pe-puppet-windows:
     provisioners:
       - {type: pe_agent, master: master}
-      - {type: shell, inline: 'shutdown -t 0 -r -f'}
 
   # custom role definitions from puppet-debugging-kit
   base:
