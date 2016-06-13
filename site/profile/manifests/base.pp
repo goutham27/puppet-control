@@ -3,7 +3,7 @@
 #
 class profile::base {
 
-  case $::osfamily
+  case $::osfamily {
 
     'Windows': {
       class {'chocolatey':
@@ -14,11 +14,12 @@ class profile::base {
     }
 
     'Redhat': {
-       package { 'nano'
+       package { 'nano':
          ensure => installed,
        }
 
     }
 
+  }
 
 }
