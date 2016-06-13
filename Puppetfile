@@ -11,6 +11,15 @@ mod "puppetlabs/inifile",  '1.5.0'
 mod "puppetlabs/vcsrepo",  '1.3.2'
 mod "puppetlabs/windows",  '2.2.0'
 mod "zack/r10k"
+mod "chocolatey/chocolatey"
+mod "badgerious/windows_ev"
+mod "puppetlabs/acl"
+mod "puppetlabs/registry"
+mod "puppetlabs/powershell"
+mod "puppetlabs/registry"
+mod "puppetlabs/dsc"
+mod "puppetlabs/iis"
+mod "puppetlabs/windowsfeature"
 
 #mod 'apache',
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
