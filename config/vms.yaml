@@ -24,7 +24,7 @@ vms:
     - el-fix-path
     - base
     - 4gb-memory
-  - name: vagrant-win2012r2
+  - name: win2012r2
     # hostname must not be a FQDN or the rename fails on Windows
     hostname: vagrant-win2012r2
     box: win2012r2-x64-virtualbox-nocm
@@ -32,7 +32,7 @@ vms:
     - pe-puppet-windows
     - windows
     - base
-    - 2gb-memory
+    - 1gb-memory
 
 roles:
   # our actual node specific stuff!
@@ -44,7 +44,7 @@ roles:
       - {type: shell, path: './config/setup.sh' }
   pe-puppet-windows:
     provisioners:
-      - {type: pe_bootstrap}
+      - {type: pe_agent, master: master}
       - {type: shell, inline: 'shutdown -t 0 -r -f'}
 
   # custom role definitions from puppet-debugging-kit
@@ -138,5 +138,3 @@ roles:
       # necessary for boxes that don't have RDP enabled
       - {type: shell, path: './config/enable-rdp.bat'}
       - {type: shell, path: './config/install-certs.ps1'}
-      # currently production preview of WMF5
-      - {type: shell, path: './config/install-wmf5.bat'}
