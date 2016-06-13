@@ -18,8 +18,8 @@ mod "puppetlabs/registry"
 mod "puppetlabs/powershell"
 mod "puppetlabs/registry"
 mod "puppetlabs/dsc"
-mod "puppetlabs/iis"
-mod "puppetlabs/windowsfeature"
+mod "puppet/iis"
+mod "puppet/windowsfeature"
 
 #mod 'apache',
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
