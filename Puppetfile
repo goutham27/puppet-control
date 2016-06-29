@@ -20,6 +20,7 @@ mod "puppetlabs/registry"
 mod "puppetlabs/dsc"
 mod "puppet/iis"
 mod "puppet/windowsfeature"
+mod "abrader/gms"
 
 #mod 'apache',
 #  :git    => 'https://github.com/puppetlabs/puppetlabs-apache',
