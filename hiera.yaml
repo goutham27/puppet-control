@@ -5,9 +5,8 @@
   :datadir: "/etc/puppetlabs/code/environments/%{::environment}/hieradata"
 :hierarchy:
   - "nodes/%{::trusted.certname}"
-  - "nodes/%{::hostname}"
-  - "nodes/dev/%{::hostname}"
-  - "nodes/test/%{::hostname}"
+  - "nodes/dev/%{hostname}"
+  - "nodes/test/%{hostname}"
   - "nodes/prod/%{::hostname}"
   - "virtual/%{::virtual}"
   - "common"
