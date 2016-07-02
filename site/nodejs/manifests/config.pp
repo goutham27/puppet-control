@@ -6,12 +6,12 @@ class nodejs::config {
     windows : {
 
       exec { 'set-node-registry' :
-              command   => 'npm.cmd config set registry="http://registry.npms.org/"',
-              logoutput => true,
-              path      => 'c:\program files\nodejs',
-              onlyif    => 'npm.cmd config get rgistry | c:\windows\system32\findstr.exe https://registry.npms.org',
-            }
-        }
+        command   => 'npm.cmd config set registry="http://registry.npms.org/"',
+        logoutput => true,
+        path      => 'c:\program files\nodejs',
+        onlyif    => 'npm.cmd config get rgistry | c:\windows\system32\findstr.exe https://registry.npms.org',
+      }
+    }
 
     redhat : {
 
@@ -22,5 +22,9 @@ class nodejs::config {
         mode     => '0755',
       }
     }
+
+    default: {
+    	fail("Module ${module_name} is not supported on {::operatngsystem}")
     }
+  }
 }

@@ -9,15 +9,14 @@ class nodejs (String $version = '') {
 
       package {'nodejs' :
         ensure   => $version,
-        provider => 'chocoatey',
-      
+        provider => 'chocolatey',
       }
 
-      windows_env {'$PATH = c:\program files\nodejs' :
+      windows_env {'$PATH = C:\Program files\nodejs' :
         ensure => present,
       }
 
-      windows_env {'$PATH = c:\Users\Vagrant\Appdata\roaming\npm' :
+      windows_env {'$PATH = C:\Users\Vagrant\Appdata\roaming\npm' :
         ensure => present,
       }
 	}
@@ -25,7 +24,7 @@ class nodejs (String $version = '') {
 	redhat : {
       
       package {'nodejs' :
-        ensure => present
+        ensure => present,
       }
 
       package{ 'npm' :
@@ -35,7 +34,6 @@ class nodejs (String $version = '') {
 
 	default: {
       fail("Module ${module_name} is not supported on {::operatng system}")
-     
     }
   }
 
