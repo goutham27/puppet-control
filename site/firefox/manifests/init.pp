@@ -16,7 +16,7 @@ class firefox ( String $version = '') {
         provider => 'chocolatey',
       }
     }
-
+    
     default: {
       fail("Module ${module_name} is not supported on {::operatng system}")
     }

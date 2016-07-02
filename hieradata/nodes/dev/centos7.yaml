@@ -1,7 +1,7 @@
 ---
 classes:
 - role::base
-- helloworld
 - git
 - firefox
 - chrome
+- nodejs
