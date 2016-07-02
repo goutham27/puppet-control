@@ -1,4 +1,6 @@
 ---
-  classes:
-   - role::base
-   - helloworld
+classes:
+- role::base
+- helloworld
+- git
+git::version: 2.9.0
