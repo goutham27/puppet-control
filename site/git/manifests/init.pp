@@ -15,7 +15,7 @@ class git ( String $version = '') {
     windows: {
 
       package{ 'git' :
-        ensure   => $version
+        ensure   => $version,
         provider => 'chocolatey',
       }
 
