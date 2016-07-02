@@ -1,5 +1,5 @@
 class localusers {
-	
+
   user { 'admin':
     ensure     => present,
     shell      => '/bin/bash',
@@ -11,7 +11,7 @@ class localusers {
 
   user {'jeff' :
     ensure     => present,
-    shell      => '/bin/bash/',
+    shell      => '/bin/bash',
     home       => 'home/jeff',
     groups     => ['wheel', 'finance'],
     managehome => true,
