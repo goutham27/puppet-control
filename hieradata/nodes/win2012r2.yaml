@@ -3,4 +3,8 @@ classes:
 - role::base
 - helloworld
 - git
+- firefox
+- googlechrome
 git::version: 2.9.0
+firefox::version: 47.0.1
+googlechrome::version: 51.0.2704.106
