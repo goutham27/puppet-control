@@ -18,4 +18,4 @@ case $operatingsystem {
   }
 }
 
-hiera_include('roles')
+hiera_include('classes')

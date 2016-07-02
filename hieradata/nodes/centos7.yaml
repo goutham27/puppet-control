@@ -1,3 +1,3 @@
 ---
-  classes:
+  roles:
    - role::base

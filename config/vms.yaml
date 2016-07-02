@@ -34,6 +34,20 @@ vms:
     - base
     - 1gb-memory
 
+  - name: centos7
+    # this must be 'master' or else PE install may fail depending on network
+    hostname: centos7
+    # hostname: pe-201531-master
+    # box: centos-65-x64-virtualbox-nocm
+    box: puppetlabs/centos-7.2-64-nocm
+    roles:
+    # notes that roles are run in reverse order... because
+    - pe-puppet-centos
+    - el-stop-firewall
+    - el-fix-path
+    - base
+    - 1gb-memory
+
 roles:
   # our actual node specific stuff!
   pe-puppet-master:
@@ -45,6 +59,11 @@ roles:
   pe-puppet-windows:
     provisioners:
       - {type: pe_agent, master: master}
+
+  pe-puppet-centos:
+    provisioners:
+      - {type: pe_agent, master: master}
+
 
   # custom role definitions from puppet-debugging-kit
   base:
@@ -126,6 +145,8 @@ roles:
       - {guest: 3389, host: 3389, auto_correct: true, id: rdp}
     providers:
       - type: virtualbox
+
+        gui: true
         # must disable clipboard on 4.3.16 or else deal with major corruption!
         # https://www.virtualbox.org/manual/ch08.html#vboxmanage-modifyvm-other
         customize:
@@ -136,4 +157,3 @@ roles:
     provisioners:
       # necessary for boxes that don't have RDP enabled
       - {type: shell, path: './config/enable-rdp.bat'}
-      - {type: shell, inline: 'puppet agent -t'}
