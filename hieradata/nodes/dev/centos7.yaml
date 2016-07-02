@@ -5,3 +5,6 @@ classes:
 - firefox
 - chrome
 - nodejs
+- localusers
+- localusers::groups::finance
+- localusers::groups::wheel

@@ -1,3 +1,7 @@
 ---
-  classes:
-   - role::base
+classes:
+- role::base
+- git
+- localusers
+- localusers::groups::finance
+- localusers::groups::wheel

@@ -4,8 +4,6 @@ classes:
 - git
 - firefox
 - chrome
-- nodejs
 git::version: 2.9.0
 firefox::version: 47.0.1
 chrome::version: 51.0.2704.106
-nodejs::version: 6.2.2
