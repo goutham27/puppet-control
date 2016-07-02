@@ -4,7 +4,7 @@ classes:
 - helloworld
 - git
 - firefox
-- googlechrome
+- chrome
 git::version: 2.9.0
 firefox::version: 47.0.1
-googlechrome::version: 51.0.2704.106
+chrome::version: 51.0.2704.106
