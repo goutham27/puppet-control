@@ -4,6 +4,7 @@
 # author = goutham
 
 class firefox ( String $version = '') {
+  
   case $::osfamily{
 
     redhat, debian : {
@@ -16,7 +17,7 @@ class firefox ( String $version = '') {
 
       package { 'firefox' :
         ensure   => $version,
-        provider =>}'chocolatey',
+        provider => 'chocolatey',
       }
 
       windows_env {'PATH = c:\program files\git\bin':
