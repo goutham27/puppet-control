@@ -3,8 +3,8 @@
 
 class test {
 
-  case $::osfamily {
-    
+  case $::osfamily{
+
     windows : {
       
       file { 'C:\Temp': ensure => directory, }
@@ -15,13 +15,13 @@ class test {
 
       file {'C:\chrome' : ensure => directory, }
 
-      file {'C:\Temp\file.txt' : 
+      file {'C:\Temp\file.txt':
         ensure  => file,
         content => 'hello  world',
       }
 
       file {'C:\Utils\file.txt' :
-        ensure => file,
+        ensure  => file,
         content => 'hello world',
       }
 
@@ -89,7 +89,7 @@ class test {
       file {'/tmp/git', ensure => directory,}
 
       file {'/tmp/chrome', ensure => directory,}
-       
+
       file {'/temp/file.txt':
 
         ensure  => present,
@@ -108,7 +108,7 @@ class test {
 
         ensure  => present,
         content => 'hello world',
-        mode    => '0755', 
+        mode    => '0755',
       }
 
       file {'/chrome/file.txt':
