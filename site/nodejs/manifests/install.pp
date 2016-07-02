@@ -3,9 +3,9 @@
 
 class nodejs (String $version = '') {
   
-  case $::osfamily : {
+  case $::osfamily {
     
-    windows : {
+    windows: {
 
       package {'nodejs' :
         ensure   => $version,
@@ -21,7 +21,7 @@ class nodejs (String $version = '') {
       }
 	}
 
-	redhat : {
+	redhat: {
       
       package {'nodejs' :
         ensure => present,
