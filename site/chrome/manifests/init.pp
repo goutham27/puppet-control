@@ -15,10 +15,6 @@ class chrome ( String $version = '') {
         ensure   => $version,
         provider => 'chocolatey',
       }
-      
-      windows_env {'PATH = c:\program files\git\bin':
-        ensure => present,
-      }
     }
     
     default: {
