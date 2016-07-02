@@ -7,11 +7,7 @@ class firefox ( String $version = '') {
   
   case $::osfamily{
 
-    redhat, debian : {
-      package {'firefox' :
-        ensure => present,
-      }
-    }
+    redhat, debian : { }
     
     windows: {
 

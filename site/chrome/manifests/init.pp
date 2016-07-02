@@ -4,13 +4,10 @@
 #author : goutham
 
 class chrome ( String $version = '') {
+  
   case $::osfamily{
 
-    redhat, debian : {
-      package{ 'googlechrome' :
-        ensure => present,
-      }
-    }
+    redhat, debian : { }
 
     windows : {
 
