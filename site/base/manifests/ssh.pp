@@ -9,7 +9,7 @@ class base::ssh {
     owner   => 'root',
     group   => 'root',
     require => Package['openssh-package'],
-    source  => 'puppet:///etc/ssh/sshd_config',
+    conent  => file('base/sshd_config'),
   }
 
   service { 'sshd':
