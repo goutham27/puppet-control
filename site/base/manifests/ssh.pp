@@ -9,7 +9,7 @@ class base::ssh {
     owner   => 'root',
     group   => 'root',
     require => Package['openssh-package'],
-    source  => file('ssh/sshd_config'),
+    content => file('ssh/sshd_config'),
   }
 
   service { 'sshd':
