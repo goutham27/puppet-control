@@ -4,7 +4,6 @@ classes:
 - git
 - firefox
 - chrome
-- nodejs
 - localusers
 - localusers::groups::finance
 - localusers::groups::wheel
