@@ -9,7 +9,7 @@ class nodejs::config {
         command   => 'npm.cmd config set registry="http://registry.npms.org/"',
         logoutput => true,
         path      => 'c:\program files\nodejs',
-        onlyif    => 'npm.cmd config get rgistry | c:\windows\system32\findstr.exe https://registry.npms.org',
+        onlyif    => 'npm.cmd config get registry | c:\windows\system32\findstr.exe https://registry.npms.org',
       }
     }
 
