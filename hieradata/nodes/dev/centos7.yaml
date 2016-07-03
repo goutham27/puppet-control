@@ -4,13 +4,4 @@ classes:
 - git
 - firefox
 - chrome
-- localusers
-- localusers::groups::finance
-- localusers::groups::wheel
-- filedemo
-- base
-- base::ssh
-- base::params
-- base::motd
-- ntp
-- profiles
+- roles::webserver

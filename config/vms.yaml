@@ -48,6 +48,18 @@ vms:
     - base
     - 1gb-memory
 
+  - name: ubuntu14
+    # this must be 'master' or else PE install may fail depending on network
+    hostname: ubuntu14
+    # hostname: pe-201531-master
+    # box: centos-65-x64-virtualbox-nocm
+    box: puppetlabs/ubuntu-14.04-64-puppet
+    roles:
+    # notes that roles are run in reverse order... because
+    - pe-puppet-ubuntu
+    - base
+    - 1gb-memory
+
 roles:
   # our actual node specific stuff!
   pe-puppet-master:
@@ -61,6 +73,10 @@ roles:
       - {type: pe_agent, master: master}
 
   pe-puppet-centos:
+    provisioners:
+      - {type: pe_agent, master: master}
+
+  pe-puppet-ubuntu:
     provisioners:
       - {type: pe_agent, master: master}
 
