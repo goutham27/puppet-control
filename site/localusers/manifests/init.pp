@@ -12,7 +12,7 @@ class localusers {
   user {'jeff' :
     ensure     => present,
     shell      => '/bin/bash',
-    home       => 'home/jeff',
+    home       => '/home/jeff',
     groups     => ['wheel', 'finance'],
     managehome => true,
   }
