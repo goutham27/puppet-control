@@ -9,3 +9,4 @@ classes:
 - localusers::groups::finance
 - localusers::groups::wheel
 - filedemo
+- base

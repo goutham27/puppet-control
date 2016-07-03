@@ -1,7 +1,7 @@
 class filedemo {
   file { '/root/motd':
     ensure   => present,
-    content  => 'im a devops engineer',
+    source   => 'puppet:///modules/filedemo/motd',
     owner    => root,
     group    => root,
     mode     => '0644',
