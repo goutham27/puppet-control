@@ -1,7 +1,7 @@
 #
 #
 
-class nodejs (String $version = '') {
+class nodejs::install (String $version = '') {
   
   case $::osfamily {
     
