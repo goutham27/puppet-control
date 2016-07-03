@@ -10,3 +10,7 @@ classes:
 - filedemo
 - base
 - base::ssh
+- base::params
+- base::motd
+- ntp
+- profiles

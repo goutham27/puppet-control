@@ -11,5 +11,6 @@ class filedemo {
     ensure => link,
     target => '/root/motd',
   }
+  include filedemo::rc
  
 }
