@@ -5,3 +5,4 @@ classes:
 - localusers
 - localusers::groups::finance
 - localusers::groups::wheel
+- filedemo
