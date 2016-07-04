@@ -26,7 +26,7 @@ class apache (
   apache::vhost { 'default':
     port  => 80,
     document_root => $document_root,
-    servername    => $servername,
+    server_name    => $servername,
     vhost_dir     => $vhost_dir,
   }
 
