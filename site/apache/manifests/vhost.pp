@@ -2,7 +2,7 @@ define apache::vhost ($port, $document_root, $server_name, $vhost_name = '*', $v
   
   File {
     ensure => file,
-    mode   => 0677,
+    mode   => '0677',
   } 
 
   file { 'index':
