@@ -1,7 +1,7 @@
 define apache::vhost ($port, $document_root, $server_name, $vhost_name = '*', $vhost_dir) {
   
   File {
-    ensure => file.
+    ensure => file,
     mode   => 0677,
   } 
 
