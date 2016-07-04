@@ -19,7 +19,7 @@ class apache (
   }
 
   file { $log_dir:
-    emsure  => directory,
+    ensure  => directory,
     recurse => true,
   }
  
