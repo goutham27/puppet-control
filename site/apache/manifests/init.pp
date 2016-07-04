@@ -11,6 +11,7 @@ class apache (
   inherits apache::params {
     
     include apache::params
+    include apache::package
     include apache::service
 
   file {$document_root:
