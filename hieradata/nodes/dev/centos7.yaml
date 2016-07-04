@@ -5,3 +5,4 @@ classes:
 - firefox
 - chrome
 - roles::webserver
+- apache
