@@ -1,13 +1,13 @@
 define apache::vhost ($port, $document_root, $server_name, $vhost_name = '*', $vhost_dir) {
   
-  file {
-    mode => 0677,
+  File {
+    ensure => file.
+    mode   => 0677,
   } 
 
   file { 'index':
     path    => "${document_root}/index.html",
-    ensure  => file,
-    content => template('apahe/index.html.erb'),
+    content => template('apache/index.html.erb'),
     before  => File['config_file'],
   }
 
