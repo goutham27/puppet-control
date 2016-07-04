@@ -2,12 +2,8 @@ class apache::params {
 
 # specify a server name for or virtual host configuration files
 
-  if($::fqdn) {
-    $servername = $::fqdn
-  }
-  else {
+ 
     $servername = $::hostname  
-  }
   
   $document_root = "/var/www/websites"
 

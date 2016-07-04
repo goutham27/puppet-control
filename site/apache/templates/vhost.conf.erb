@@ -1,7 +1,7 @@
 <VirtualHost *: <%= @port -%> >
-  servername <%= @servername %>
-
+  Servername <%= @servername %>
   ServerAdmin webmaster@company.com
+  ServerAlias www.<%= @servername %>
   DocumentRoot <%= @document_root %>
 
   ErrorLog <%= @log_dir -%>/<%= @servername -%>-error.log
