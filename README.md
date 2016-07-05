@@ -105,6 +105,7 @@ vagrant rdp win2012r2
 
 ```
 vagrant ssh centos7
+
 ```
 
 ### Footnotes
