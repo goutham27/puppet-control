@@ -98,7 +98,13 @@ vagrant ssh master
 #### RDP to the Windows agent
 
 ```
-vagrant rdp vagrant-win2012r2
+vagrant rdp win2012r2
+```
+
+#### SSH to the centos agent
+
+```
+vagrant ssh centos7
 ```
 
 ### Footnotes
